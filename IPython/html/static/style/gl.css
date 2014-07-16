@@ -42,3 +42,97 @@
 .gl div.prompt {
   display: none;
 }
+
+.colorbars {
+	height: 4px;
+}
+
+div.input_area {
+	border: hidden;
+	border-radius: 0px;
+}
+
+div.cell.selected  {
+	border: hidden;
+	border-radius: 0px;
+}
+
+
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
+background-image: -webkit-linear-gradient(top, #fff, #fff); 
+background-image: -o-linear-gradient(top, #fff, #fff);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff', GradientType=0);
+-moz-border-radius: 0px;
+-moz-box-shadow: 0 0px 0px rgba(0,0,0,0.0);
+webkit-box-shadow: 0 0px 0px rgba(0,0,0,0); 
+-moz-box-shadow: 0 0px 0px rgba(0,0,0,0);
+box-shadow: 0 0px 0px rgba(0,0,0,0);
+border: hidden;
+}
+
+#header {
+	min-height: 46px;
+}
+.gl .CodeMirror pre {
+	font-family: 'Source Code Pro' ;
+}
+
+#ipython_notebook img {
+	height: 28px;
+}
+
+.navbar .nav>li>a {
+	color: #000;
+	text-shadow: 0 0px 0 #fff;
+	}
+	
+.CodeMirror {
+	line-height: 2.21429em;
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+div#notebook{
+	padding: 2em 0 1em 0;
+	border: hidden;
+}	
+	
+#ipython_notebook {
+	padding-left: 34px;
+}
+
+div#notebook_panel {
+	margin: 0 0 0 0;
+	padding: 0;
+   -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0); 
+	-moz-box-shadow: 0 0px 0px rgba(0,0,0,0);
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
+
+#menubar .navbar {
+	margin-bottom: 0px;
+}	
+.indicator_area {
+padding: 4px 10px;
+}
+pre {
+	font-family: source code pro;
+}
+.menubarblock {
+	background-color: #EBEBEB;
+}
+	
+.gl div.output_area {
+	border-radius: 0px;
+	border: 1px solid #E6E6E6;
+	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	-moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+}
+.gl div.output_scroll {
+	border-radius: 0px;
+	border: 1px solid #E6E6E6;
+	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	-moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+}
