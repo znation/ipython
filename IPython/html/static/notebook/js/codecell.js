@@ -134,7 +134,9 @@ var IPython = (function (IPython) {
         this.code_mirror = CodeMirror(input_area.get(0), this.cm_config);
         $(this.code_mirror.getInputField()).attr("spellcheck", "false");
         inner_cell.append(input_area);
-        input.append(prompt).append(inner_cell);
+        input.append(prompt).append(
+          $('<div/>').addClass('running').append($('<img/>').attr('src', '/static/base/images/green_dot.png'))
+        ).append(inner_cell);
 
         var widget_area = $('<div/>')
             .addClass('widget-area')
@@ -416,6 +418,13 @@ var IPython = (function (IPython) {
 
 
     CodeCell.prototype.set_input_prompt = function (number) {
+        if (number === '*') {
+          this.element.find('div.running').css('opacity', 1.0);
+        }
+        else {
+          this.element.find('div.running').css('opacity', 0.0);
+        }
+        /*
         var nline = 1;
         if (this.code_mirror !== undefined) {
            nline = this.code_mirror.lineCount();
@@ -424,6 +433,7 @@ var IPython = (function (IPython) {
         var prompt_html = CodeCell.input_prompt_function(this.input_prompt_number, nline);
         // This HTML call is okay because the user contents are escaped.
         this.element.find('div.input_prompt').html(prompt_html);
+        */
     };
 
 

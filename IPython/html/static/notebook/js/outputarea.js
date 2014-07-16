@@ -136,7 +136,7 @@ var IPython = (function (IPython) {
         if (this.collapsed) {
             this.collapse_button.hide();
             this.element.show();
-            this.prompt_overlay.show();
+            //this.prompt_overlay.show();
             this.collapsed = false;
         }
     };
@@ -409,7 +409,7 @@ var IPython = (function (IPython) {
         var n = json.prompt_number || ' ';
         var toinsert = this.create_output_area();
         if (this.prompt_area) {
-            toinsert.find('div.prompt').addClass('output_prompt').text('Out[' + n + ']:');
+            //toinsert.find('div.prompt').addClass('output_prompt').text('Out[' + n + ']:');
         }
         var inserted = this.append_mime_type(json, toinsert);
         if (inserted) {
