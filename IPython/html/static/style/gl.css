@@ -48,13 +48,13 @@ div.input_area {
 }
 
 .gl div.cell {
-  border: 3px solid transparent;
+  border: 1px solid transparent;
   border-radius: 0;
-  padding: 0px;
+  padding: 2px;
 }
 
 .gl div.cell.code_cell.selected  {
-	border: 3px solid #85bd00;
+	border: 1px solid #85bd00;
 }
 
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
