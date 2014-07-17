@@ -108,13 +108,15 @@ var IPython = (function (IPython) {
         
         // Start the kernel indicator in the busy state, and send a kernel_info request.
         // When the kernel_info reply arrives, the kernel is idle.
-        $kernel_ind_icon.attr('class','kernel_busy_icon').attr('title','Kernel Busy');
+        $kernel_ind_icon.attr('class','').attr('title','Kernel Idle');
 
+        /*
         $([IPython.events]).on('status_started.Kernel', function (evt, data) {
             data.kernel.kernel_info(function () {
                 $([IPython.events]).trigger('status_idle.Kernel');
             });
         });
+        */
 
         $([IPython.events]).on('status_dead.Kernel',function () {
             var msg = 'The kernel has died, and the automatic restart has failed.' +

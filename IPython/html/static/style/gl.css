@@ -23,7 +23,7 @@
   background: none;
   box-shadow: none;
   padding-left: 0px;
-  margin-left: -12px;
+  margin-left: -6px;
 }
 
 .gl div.output_wrapper {
@@ -47,10 +47,15 @@ div.input_area {
 	border-radius: 0px;
 }
 
-div.cell.selected  {
-	border: 1px solid transparent;
+.gl div.cell {
+  border: 3px solid transparent;
+  border-radius: 0;
+  padding: 0px;
 }
 
+.gl div.cell.code_cell.selected  {
+	border: 3px solid #85bd00;
+}
 
 .navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner {
 background-image: -webkit-linear-gradient(top, #fff, #fff); 
@@ -91,7 +96,7 @@ border: hidden;
 }	
 	
 #ipython_notebook {
-	padding-left: 3px;
+	padding-left: 10px;
 }
 
 div#notebook_panel {
@@ -181,5 +186,5 @@ pre {
 }
 
 .gl div#kernel_indicator {
-  margin-right: -1px;
+  margin-right: -13px;
 }
