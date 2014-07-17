@@ -4,8 +4,8 @@
 
 .gl span#notebook_name {
   color: #0a8cc4;
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 .gl #menubar-container.container-fluid {
@@ -22,17 +22,12 @@
   border: 0;
   background: none;
   box-shadow: none;
-}
-
-.gl .running {
-  line-height: 30px;
-  vertical-align: middle;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 0px;
+  margin-left: -12px;
 }
 
 .gl div.output_wrapper {
-  margin-left: 40px;
+  margin-left: 0px;
 }
 
 /* hide these */
@@ -53,8 +48,7 @@ div.input_area {
 }
 
 div.cell.selected  {
-	border: hidden;
-	border-radius: 0px;
+	border: 1px solid transparent;
 }
 
 
@@ -75,6 +69,9 @@ border: hidden;
 }
 .gl .CodeMirror pre {
 	font-family: 'Source Code Pro' ;
+	line-height: 22px;
+	padding-left: 10px;
+	font-size: 14px;
 }
 
 #ipython_notebook img {
@@ -82,23 +79,19 @@ border: hidden;
 }
 
 .navbar .nav>li>a {
-	color: #000;
+	color: #EBEBEB;
 	text-shadow: 0 0px 0 #fff;
-	}
-	
-.CodeMirror {
-	line-height: 2.21429em;
-	padding-left: 10px;
-	font-size: 15px;
 }
-
-div#notebook{
-	padding: 2em 0 1em 0;
+	
+.gl div#notebook{
+	padding: 15px 0 15px 0;
 	border: hidden;
+  font-size: 15px;
+  font-weight: 300;
 }	
 	
 #ipython_notebook {
-	padding-left: 34px;
+	padding-left: 3px;
 }
 
 div#notebook_panel {
@@ -116,15 +109,19 @@ div#notebook_panel {
 padding: 4px 10px;
 }
 pre {
-	font-family: source code pro;
+	font-family: 'Source Code Pro' ;
+	line-height: 22px;
+	padding-left: 10px;
+	font-size: 14px;
 }
 .menubarblock {
 	background-color: #EBEBEB;
+  margin-bottom: 4px;
 }
 	
 .gl div.output_area {
 	border-radius: 0px;
-	border: 1px solid #E6E6E6;
+	border: none;
 	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
 	-moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
 	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
@@ -135,4 +132,54 @@ pre {
 	-webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
 	-moz-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
 	box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+}
+
+.gl span#save_widget {
+  margin-top: 15px;
+}
+
+.gl div.output_stderr {
+  background-color: white;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 12px;
+  border: none;
+}
+
+.gl div.inner_cell {
+  position: relative;
+}
+
+.gl .gl_running {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.gl .gl_running>i {
+  color: #85bd00;
+}
+
+.gl .gl_running>i.icon-ok-sign {
+  opacity: 0.4;
+}
+
+.gl div.input {
+  border-top: 1px solid #EBEBEB;
+  border-left: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB;
+}
+
+.gl div.output_wrapper {
+  border-bottom: 1px solid #EBEBEB;
+  border-left: 1px solid #EBEBEB;
+  border-right: 1px solid #EBEBEB;
+}
+
+.gl div#kernel_indicator {
+  margin-right: -1px;
 }

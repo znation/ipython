@@ -89,12 +89,12 @@ var IPython = (function (IPython) {
         // Kernel events
         $([IPython.events]).on('status_idle.Kernel',function () {
             IPython.save_widget.update_document_title();
-            $kernel_ind_icon.attr('class','kernel_idle_icon').attr('title','Kernel Idle');
+            $kernel_ind_icon.attr('class','icon-ok-sign').attr('title','Kernel Idle');
         });
 
         $([IPython.events]).on('status_busy.Kernel',function () {
             window.document.title='(Busy) '+window.document.title;
-            $kernel_ind_icon.attr('class','kernel_busy_icon').attr('title','Kernel Busy');
+            $kernel_ind_icon.attr('class','icon-spinner icon-spin icon-large').attr('title','Kernel Busy');
         });
 
         $([IPython.events]).on('status_restarting.Kernel',function () {

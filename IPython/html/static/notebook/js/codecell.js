@@ -133,10 +133,9 @@ var IPython = (function (IPython) {
         var input_area = $('<div/>').addClass('input_area');
         this.code_mirror = CodeMirror(input_area.get(0), this.cm_config);
         $(this.code_mirror.getInputField()).attr("spellcheck", "false");
-        inner_cell.append(input_area);
-        input.append(prompt).append(
-          $('<div/>').addClass('running').append($('<img/>').attr('src', '/static/base/images/green_dot.png'))
-        ).append(inner_cell);
+        inner_cell.append(input_area).append(
+          $('<div class="gl_running" />'));
+        input.append(prompt).append(inner_cell);
 
         var widget_area = $('<div/>')
             .addClass('widget-area')
@@ -418,11 +417,17 @@ var IPython = (function (IPython) {
 
 
     CodeCell.prototype.set_input_prompt = function (number) {
+        this.element.find('div.gl_running').html('');
+        var isNumber = !isNaN(parseInt(number));
         if (number === '*') {
-          this.element.find('div.running').css('opacity', 1.0);
+          this.element.find('div.gl_running').append(
+            $('<i/>').addClass('icon-spinner icon-spin icon-large')
+          );
         }
-        else {
-          this.element.find('div.running').css('opacity', 0.0);
+        else if (isNumber) {
+          this.element.find('div.gl_running').append(
+            $('<i/>').addClass('icon-ok-sign')
+          );
         }
         /*
         var nline = 1;
